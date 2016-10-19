@@ -1,0 +1,38 @@
+bool setDigitalPinMode(int aPinNumber, int aPinMode)
+{
+   FILE * myFileDescriptor;
+   char myNodeName[128];
+
+   // Exporting the pin to be used
+   if(( myFileDescriptor = fopen("/sys/class/gpio/export", "w")) == NULL)
+   {
+      printf("Error: unable to export pin number %d\n", aPinNumber);
+      return false;
+   }
+
+   fprintf(myFileDescriptor, "%d\n", aPinNumber);
+
+   fclose(myFileDescriptor);
+
+   // Setting direction of the pin (pin mode)
+   sprintf(myNodeName, "/sys/class/gpio/gpio%d/direction", aPinNumber);
+
+   if((myFileDescriptor = fopen(myNodeName, "w")) == NULL)
+   {
+      printf("Error: can't open pin direction for node %s\n", myNodeName);
+      return false;
+   }
+
+   if(aPinMode == OUTPUT)
+   {
+      fprintf(myFileDescriptor, "out\n");
+   }
+   else
+   {
+      fprintf(myFileDescriptor, "in\n");
+   }
+
+   fclose(myFileDescriptor);
+
+   return true;
+}

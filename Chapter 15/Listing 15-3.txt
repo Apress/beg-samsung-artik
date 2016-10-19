@@ -1,0 +1,16 @@
+// Select one of these values to choose a mode
+myGPIOMode = "out";
+//myGPIOMode = "in";
+
+// Open the direction configuration for the GPIO node
+if((myGPIOModeFd = fopen(myGPIOModeName, "w")) == NULL)
+{
+   printf("Error: can't open pin direction\n");
+   return false;
+}
+
+// Set the pin mode with the passed in direction
+fprintf(myGPIOModeFd, "%s\n", myGPIOMode);
+
+// Close the direction configurator
+fclose(myGPIOModeFd);

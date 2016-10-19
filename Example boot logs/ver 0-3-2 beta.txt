@@ -1,0 +1,282 @@
+U-Boot 2012.07 (Nov 09 2015 - 13:32:25) for ARTIK5
+
+CPU: Exynos3250 [Samsung SOC on SMP Platform Base on ARM CortexA7]
+APLL = 700MHz, MPLL = 800MHz
+
+Board: ARTIK5
+DRAM:  504 MiB
+WARNING: Caches not enabled
+
+TrustZone Enabled BSP
+BL1 version: 20140203
+
+Checking Boot Mode ... EMMC4.41
+MMC:   S5P_MSHC0: 0, S5P_MSHC2: 1
+MMC Device 0: 3.6 GiB
+MMC Device 1: [ERROR] response error : 00000006 cmd 8
+[ERROR] response error : 00000006 cmd 55
+[ERROR] response error : 00000006 cmd 2
+In:    serial
+Out:   serial
+Err:   serial
+rst_stat : 0x10000
+Net:   No ethernet found.
+Hit any key to stop autoboot:  3  2  1  0 
+
+
+reading zImage
+4367680 bytes read in 17600 ms (242.2 KiB/s)
+reading exynos3250-artik5.dtb
+38241 bytes read in 11667 ms (2.9 KiB/s)
+reading uInitrd
+1353683 bytes read in 25638 ms (50.8 KiB/s)
+## Loading init Ramdisk from Legacy Image at 43000000 ...
+   Image Name:   uInitrd
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1353619 Bytes = 1.3 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+## Flattened Device Tree blob at 40800000
+   Booting using the fdt blob at 0x40800000
+   Loading Ramdisk to 43eb5000, end 43fff793 ... OK
+   Loading Device Tree to 43ea8000, end 43eb4560 ... OK
+
+
+Starting kernel ...
+
+[    0.059426] /cpus/cpu@0 missing clock-frequency property
+[    0.059454] /cpus/cpu@1 missing clock-frequency property
+[    0.284917] cw201x 1-0062: get cw_capacity error; cw_capacity = 255
+[    0.619665] (unregistered net_device): timeout waiting for reset completion
+[    0.666998] jpeg-hx2 11830000.jpeg: failed to get parent1 clk
+[    0.782503] exynos-adc 126c0000.adc: operating without regulator vdd[-19]
+[    3.834717] s5p-decon-display 11c00000.fimd_fb: wait for vsync timeout
+Loading, please wait...
+
+Welcome to Fedora 22 (Twenty Two)!
+
+[  OK  ] Reached target Encrypted Volumes.
+[  OK  ] Reached target Swap.
+[  OK  ] Reached target Paths.
+[  OK  ] Created slice Root Slice.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on Delayed Shutdown Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Created slice System Slice.
+         Starting Remount Root and Kernel File Systems...
+         Starting Journal Service...
+         Mounting Temporary Directory...
+         Mounting Debug File System...
+         Starting Load Kernel Modules...
+[  OK  ] Reached target Slices.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Starting Create list of required st... nodes for the current kernel...
+         Mounting NFSD configuration filesystem...
+[  OK  ] Mounted Debug File System.
+[  OK  ] Mounted Temporary Directory.
+[  OK  ] Mounted NFSD configuration filesystem.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Create list of required sta...ce nodes for the current kernel.
+         Starting Configure read-only root support...
+         Starting udev Coldplug all Devices...
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+[  OK  ] Started Journal Service.
+[    5.099753] dhd_wlan_set_carddetect: notify_func=c0415bbc, mmc_host_dev=d8dce010, val=1
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Configure read-only root support.
+         Starting Load/Save Random Seed...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Found device /dev/ttySAC2.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Found device /dev/mmcblk0p1.
+         Mounting /boot...
+[  OK  ] Mounted /boot.
+[  OK  ] Reached target Local File Systems.
+         Starting Preprocess NFS configuration...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Reached target Sound Card.
+[  OK  ] Started Preprocess NFS configuration.
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Load Kernel Modules.
+         Starting Apply Kernel Variables...
+         Mounting Configuration File System...
+[  OK  ] Created slice system-systemd\x2drfkill.slice.
+         Starting Load/Save RF Kill Switch Status of rfkill2...
+         Starting Load/Save RF Kill Switch Status of rfkill1...
+         Mounting RPC Pipe File System...
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Mounted RPC Pipe File System.
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill2.
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill1.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+         Starting Load/Save RF Kill Switch Status of rfkill0...
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Load/Save RF Kill Switch Status of rfkill0.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started Manage Sound Card State (restore and store).
+         Starting Manage Sound Card State (restore and store)...
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on RPCbind Server Activation Socket.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting RFKill-Unblock All Devices...
+         Starting Login Service...
+         Starting GSSAPI Proxy Daemon...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting D-Bus System Message Bus...
+[  OK  ] Started pulseaudio service.
+         Starting pulseaudio service...
+         Starting BCM4354 Bluetooth firmware service...
+         Starting Network Manager...
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started RFKill-Unblock All Devices.
+[  OK  ] Started GSSAPI Proxy Daemon.
+[  OK  ] Started Login Service.
+[  OK  ] Started BCM4354 Bluetooth firmware service.
+[  OK  ] Reached target NFS client services.
+[  OK  ] Reached target Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems.
+         Starting Permit User Sessions...
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Serial Getty on ttySAC2.
+         Starting Serial Getty on ttySAC2...
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Command Scheduler.
+         Starting Command Scheduler...
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+[  OK  ] Started OpenSSH server daemon.
+         Starting OpenSSH server daemon...
+         Starting Network Name Resolution...
+         Starting Notify NFS peers of a restart...
+[  OK  ] Started Notify NFS peers of a restart.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Multi-User System.
+         Starting Update UTMP about System Runlevel Changes...
+         Starting Bluetooth service...
+[  OK  ] Started Bluetooth service.
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Fedora release 22 (Twenty Two)
+Kernel 3.10.9 on an armv7l (ttySAC2)
+
+localhost login: root
+Password: 
+Last login: Mon Feb 16 15:55:13 on ttySAC2
+
+
+[root@localhost ~]# shutdown now
+         Unmounting RPC Pipe File System...
+[  OK  ] Removed slice system-getty.slice.
+         Stopping Bluetooth service...
+         Stopping Manage Sound Card State (restore and store)...
+[  OK  ] Stopped target Multi-User System.
+         Stopping Command Scheduler...
+         Stopping Avahi mDNS/DNS-SD Stack...
+         Stopping Network Name Resolution...
+[  OK  ] Stopped target Login Prompts.
+         Stopping Login Service...
+         Stopping OpenSSH server daemon...
+[  OK  ] Stopped target Timers.
+         Stopping Serial Getty on ttySAC2...
+         Stopping User Manager for UID 0...
+         Stopping Hostname Service...
+         Stopping pulseaudio service...
+[  OK  ] Stopped target Sound Card.
+         Stopping Authorization Manager...
+[  OK  ] Stopped Login Service.
+[  OK  ] Stopped pulseaudio service.
+[  OK  ] Stopped Avahi mDNS/DNS-SD Stack.
+[  OK  ] Stopped Serial Getty on ttySAC2.
+[  OK  ] Stopped Command Scheduler.
+[  OK  ] Stopped OpenSSH server daemon.
+[  OK  ] Stopped Network Name Resolution.
+[  OK  ] Stopped Bluetooth service.
+[  OK  ] Stopped Hostname Service.
+[  OK  ] Stopped Authorization Manager.
+[  OK  ] Stopped User Manager for UID 0.
+[  OK  ] Unmounted RPC Pipe File System.
+[  OK  ] Stopped Manage Sound Card State (restore and store).
+[  OK  ] Removed slice user-0.slice.
+[  OK  ] Stopped target Network.
+         Stopping WPA Supplicant daemon...
+         Stopping Network Manager...
+[  OK  ] Stopped target System Time Synchronized.
+[  OK  ] Removed slice system-serial\x2dgetty.slice.
+         Stopping Permit User Sessions...
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Stopped WPA Supplicant daemon.
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped Network Manager.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped target Remote File Systems (Pre).
+[  OK  ] Stopped target NFS client services.
+         Stopping GSSAPI Proxy Daemon...
+[  OK  ] Stopped GSSAPI Proxy Daemon.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed RPCbind Server Activation Socket.
+[  OK  ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Stopped target System Initialization.
+[  OK  ] Stopped Apply Kernel Variables.
+         Stopping Apply Kernel Variables...
+[  OK  ] Stopped Load Kernel Modules.
+         Stopping Load Kernel Modules...
+[  OK  ] Stopped target Encrypted Volumes.
+         Stopping Load/Save RF Kill Switch Status of rfkill1...
+         Stopping Network Time Synchronization...
+         Stopping Load/Save Random Seed...
+         Stopping Load/Save RF Kill Switch Status of rfkill2...
+         Stopping Load/Save RF Kill Switch Status of rfkill0...
+[  OK  ] Stopped target Swap.
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped Network Time Synchronization.
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill1.
+[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill2.
+[  OK  ] Stopped Load/Save RF Kill Switch Status of rfkill0.
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+[  OK  ] Removed slice system-systemd\x2drfkill.slice.
+[  OK  ] Stopped Create Volatile Files and Directories.
+         Stopping Create Volatile Files and Directories...
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /run/user/0...
+[  OK  ] Stopped Configure read-only root support.
+         Stopping Configure read-only root support...
+         Unmounting /boot...
+         Unmounting /usr/lib/modules...
+         Unmounting Temporary Directory...
+[  OK  ] Unmounted /run/user/0.
+[  OK  ] Unmounted /boot.
+[  OK  ] Failed unmounting /usr/lib/modules.
+[  OK  ] Unmounted Temporary Directory.
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+         Stopping Remount Root and Kernel File Systems...
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+         Stopping Create Static Device Nodes in /dev...
+[  OK  ] Reached target Shutdown.
+[  

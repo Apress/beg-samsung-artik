@@ -1,0 +1,12 @@
+// Open the value configuration for the GPIO node
+if((myGPIOValueFd = fopen(myGPIOValueName, "r")) == NULL)
+{
+   printf("Error: can't open pin value for reading\n");
+   return false;
+}
+
+// Read the pin value
+fgets(myResult, 2, myGPIOValueFd);
+
+// Close the value configurator
+fclose(myGPIOValueFd);

@@ -1,0 +1,26 @@
+bool digitalWrite(int aPinNumber, int aPinValue)
+{
+   FILE * myFileDescriptor;
+   char myNodeName[128];
+
+   // Open pin value file
+   sprintf(myNodeName, "/sys/class/gpio/gpio%d/value", aPinNumber);
+
+   if((myFileDescriptor = fopen(myNodeName, "w")) == NULL)
+   {
+      printf("Error: can't open pin value for node %s\n", myNodeName);
+      return false;
+   }
+   if(aPinValue == HIGH)
+   {
+      fprintf(myFileDescriptor, "1\n");
+   }
+   else
+   {
+      fprintf(myFileDescriptor, "0\n");
+   }
+
+   fclose(myFileDescriptor);
+
+   return true;
+}

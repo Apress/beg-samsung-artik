@@ -1,0 +1,16 @@
+// Select one of these values to set on the pin
+myGPIOValue = 1;  // Represents HIGH
+//myGPIOValue = 0; // Represents LOW
+
+// Open the value configuration for the GPIO node
+if((myGPIOValueFd = fopen(myGPIOValueName, "w")) == NULL)
+{
+   printf("Error: can't open pin value for writing\n");
+   return false;
+}
+
+// Set the pin value with the passed in setting
+fprintf(myGPIOValueFd, "%d\n", myGPIOValue);
+
+// Close the value configurator
+fclose(myGPIOValueFd);

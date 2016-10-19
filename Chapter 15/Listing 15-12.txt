@@ -1,0 +1,20 @@
+int analogRead(int aPinNumber)
+{
+   FILE * myFileDescriptor;
+   char myNodeName[64];
+   char myResultValue[8];
+
+   // open value file
+   sprintf(myNodeName, "/sys/devices/12d10000.adc/iio:device0/in_voltage%d_raw", aPinNumber);
+
+   if((myFileDescriptor = fopen(myNodeName, "r")) == NULL)
+   {
+      printf("Error: can't open analog voltage value\n");
+      return 0;
+   }
+
+   fgets(myResultValue, 8, myFileDescriptor);
+   fclose(myFileDescriptor);
+
+   return atoi(myResultValue);
+}

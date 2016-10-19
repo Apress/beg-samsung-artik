@@ -1,0 +1,17 @@
+ws = new WebSocket(webSocketUrl);
+
+ws.on('open', function()
+{
+   console.log("WebSocket connection is open ....");
+   register();
+});
+
+ws.on('message', function(data, flags)
+{
+   console.log("Received message: " + data + '\n');
+});
+
+ws.on('close', function()
+{
+   console.log("WebSocket connection is closed ....");
+});

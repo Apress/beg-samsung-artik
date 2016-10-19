@@ -1,0 +1,20 @@
+// Load the file system support module
+var fs = require('fs');
+
+// Define the path to the analog pin
+var myVirtualFile = "/sys/devices/12d10000.adc/iio:device0/in_voltage7_raw";
+
+// Callback function to process output
+function logTheOutput(err,data)
+{
+   console.log(data);
+}
+
+// Asynchronously read the pin voltage with this function
+function readPinVoltage()
+{
+   fs.readFile(myVirtualFile,'utf8', logTheOutput);
+}
+
+// Run the interval timer every second
+setInterval(readPinVoltage,1000);

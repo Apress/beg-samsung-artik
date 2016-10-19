@@ -1,0 +1,21 @@
+int digitalRead(int aPinNumber)
+{
+   FILE * myFileDescriptor;
+   char myNodeName[128];
+   char myResultValue[2];
+
+   // Open pin value file
+   sprintf(myNodeName, "/sys/class/gpio/gpio%d/value", aPinNumber);
+
+   if((myFileDescriptor = fopen(myNodeName, "r")) == NULL)
+   {
+      printf("Error: can't open pin value for node %s\n", myNodeName);
+      return false;
+   }
+
+   fgets(myResultValue, 2, myFileDescriptor);
+
+   fclose(myFileDescriptor);
+
+   return atoi(myResultValue);
+}

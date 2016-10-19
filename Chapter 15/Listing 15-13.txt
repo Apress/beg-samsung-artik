@@ -1,0 +1,24 @@
+int inputPin = 7;
+
+int currentRun = 0;
+const int MAX_RUNS = 10;
+
+int main(void)
+{
+
+   // Loop just 10 times
+   while(currentRun < MAX_RUNS)
+   {
+      // Acquire the value
+      int sensorVal = analogRead(inputPin);
+
+      // Output a message
+      printf("current sensor is %f\n", sensorVal);
+
+      // Increment the run counter
+      currentRun++;
+
+      // Wait for a second
+      sleep(1);
+   }
+}

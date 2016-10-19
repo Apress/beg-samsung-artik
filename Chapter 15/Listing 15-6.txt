@@ -1,0 +1,12 @@
+// Open the value configuration for the GPIO node
+if((myFileDescriptor = fopen(myPinName, "r")) == NULL)
+{
+   printf("Error: can't open analog voltage value for reading\n");
+   return false;
+}
+
+// Read the pin value
+fgets(myResult, 8, myFileDescriptor);
+
+// Close the value configurator
+fclose(myFileDescriptor);

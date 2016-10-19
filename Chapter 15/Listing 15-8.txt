@@ -1,0 +1,8 @@
+myStatusResult = setDigitalPinMode(19, OUTPUT);
+myStatusResult = setDigitalPinMode(20, INPUT);
+
+myStatusResult = digitalWrite(19, HIGH);
+myStatusResult = digitalWrite(19, LOW);
+
+myValue = digitalRead(20);
+myValue = analogRead(1);

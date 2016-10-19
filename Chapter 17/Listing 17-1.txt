@@ -1,0 +1,14 @@
+// Define the path to the analog pin
+myVirtualFile = "/sys/devices/12d10000.adc/iio:device0/in_voltage7_raw";
+
+
+// Create a file object
+target = open(myVirtualFile, 'r');
+
+
+// Read the pin voltage (only eight characters required)
+target.read(8);
+
+
+// Dispose of the file
+target.close();

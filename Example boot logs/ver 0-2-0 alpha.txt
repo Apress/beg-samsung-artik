@@ -1,0 +1,747 @@
+ 
+U-Boot 2012.07.artik-5-v1.01 (Jul 06 2015 - 12:44:18) for SHIRI 
+
+CPU: Exynos3250 [Samsung SOC on SMP Platform Base on ARM CortexA9] 
+APLL = 700MHz, MPLL = 800MHz 
+
+Board: ESPRESSO3250 
+DRAM:  504 MiB 
+WARNING: Caches not enabled 
+
+TrustZone Enabled BSP 
+BL1 version: 20140203 
+
+Checking Boot Mode ... EMMC4.41 
+MMC:   S5P_MSHC0: 0, S5P_MSHC2: 1 
+MMC Device 0: 3.6 GiB 
+MMC Device 1: [ERROR] response timeout error : 00000104 cmd 1 
+Card did not respond to voltage select! 
+*** Warning - bad CRC, using default environment 
+
+In:    serial 
+Out:   serial 
+Err:   serial 
+rst_stat : 0x10000 
+Net:   No ethernet found. 
+Hit any key to stop autoboot:  3  2  1  0 
+reading kernel..device 0 Start 1063, Count 16384 
+MMC read: dev # 0, block # 1063, count 16384 ... 16384 blocks read: OK 
+completed 
+reading RFS..device 0 Start 17447, Count 32768 
+MMC read: dev # 0, block # 17447, count 32768 ... 32768 blocks read: OK 
+completed 
+
+Starting kernel ... 
+
+[    0.000000] Booting Linux on physical CPU 0x0 
+[    0.000000] Initializing cgroup subsys cpu 
+[    0.000000] Initializing cgroup subsys cpuacct 
+[    0.000000] Linux version 3.10.9artik-5-v1.01 (cometzero@dage2-PowerEdge-T620) (gcc version 4.9.2 (GCC) ) #1 SMP PREEMPT Wed Jul 8 11:40:17 KST 2015 
+[    0.000000] CPU: ARMv7 Processor [410fc073] revision 3 (ARMv7), cr=10c5387d 
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache 
+[    0.000000] Machine: Exynos3, model: Samsung SHIRI board based on EXYNOS3250 
+[    0.000000] ION: Contiguous 0x200000 bytes @ 0x0 defined for 2:mfc_sh 
+[    0.000000] ION: Contiguous 0x3000000 bytes @ 0x0 defined for 11:video 
+[    0.000000] ION: Contiguous 0x200000 bytes @ 0x0 defined for 8:mfc_fw 
+[    0.000000] ION: Contiguous 0x200000 bytes @ 0x0 defined for 12:mfc_nfw 
+[    0.000000] cma: CMA: reserved 2 MiB at 5f600000 
+[    0.000000] cma: CMA: reserved 48 MiB at 5c600000 
+[    0.000000] cma: CMA: reserved 2 MiB at 5c400000 
+[    0.000000] cma: CMA: reserved 2 MiB at 5c200000 
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc 
+[    0.000000] create_mapping_memory: section: 40000000 ~ 5f800000 
+[    0.000000] CPU EXYNOS3250 (id 0xe3472000) 
+[    0.000000] PERCPU: Embedded 8 pages/cpu @c106b000 s9088 r8192 d15488 u32768 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 128016 
+[    0.000000] Kernel command line: root=/dev/mmcblk0p1 rw rootdelay=2 console=ttySAC2,115200 vmalloc=256M ess_setup=0x46000000 
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes) 
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes) 
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes) 
+[    0.000000] Memory: 504MB = 504MB total 
+[    0.000000] Memory: 447308k/447308k available, 68788k reserved, 0K highmem 
+[    0.000000] Virtual kernel memory layout: 
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB) 
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB) 
+[    0.000000]     vmalloc : 0xe0000000 - 0xff000000   ( 496 MB) 
+[    0.000000]     lowmem  : 0xc0000000 - 0xdf800000   ( 504 MB) 
+[    0.000000]     modules : 0xbf000000 - 0xc0000000   (  16 MB) 
+[    0.000000]       .text : 0xc0008000 - 0xc07bdeb4   (7896 kB) 
+[    0.000000]       .init : 0xc07be000 - 0xc07f4380   ( 217 kB) 
+[    0.000000]       .data : 0xc07f6000 - 0xc0835d80   ( 256 kB) 
+[    0.000000]        .bss : 0xc0835d80 - 0xc087fb84   ( 296 kB) 
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1 
+[    0.000000] Preemptible hierarchical RCU implementation. 
+[    0.000000] NR_IRQS:16 nr_irqs:16 16 
+[    0.000000] Exynos3250: clock setup completed 
+[    0.000000] Exynos: pwm: clock setup completed 
+[    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms 
+[    0.000000] Switching to timer-based delay loop 
+[    0.000000] EXYNOS3250 PMU Initialize 
+[    0.000274] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=120000) 
+[    0.000292] pid_max: default: 32768 minimum: 301 
+[    0.000525] Mount-cache hash table entries: 512 
+[    0.018471] Initializing cgroup subsys debug 
+[    0.018494] Initializing cgroup subsys freezer 
+[    0.018545] CPU: Testing write buffer coherency: ok 
+[    0.018908] /cpus/cpu@0 missing clock-frequency property 
+[    0.018924] /cpus/cpu@1 missing clock-frequency property 
+[    0.018957] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000 
+[    0.019088] Running under secure firmware. 
+[    0.019119] Setting up static identity map for 0xc055a990 - 0xc055a9e8 
+[    0.061059] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001 
+[    0.061195] Brought up 2 CPUs 
+[    0.061215] SMP: Total of 2 processors activated (96.00 BogoMIPS). 
+[    0.061223] CPU: All CPU(s) started in SVC mode. 
+[    0.062117] devtmpfs: initialized 
+[    0.073068] pinctrl core: initialized pinctrl subsystem 
+[    0.073820] regulator-dummy: no parameters 
+[    0.074303] NET: Registered protocol family 16 
+[    0.074649] DMA: preallocated 256 KiB pool for atomic coherent allocations 
+[    0.100842] EXYNOS5: PM Domain Initialize 
+[    0.100987]    pd-cam    - on 
+[    0.101022]    pd-mfc    - on 
+[    0.101050]    pd-g3d    - on 
+[    0.101079]    pd-lcd0   - on 
+[    0.101110]    pd-isp    - on 
+[    0.101154] S3C Power Management, Copyright 2004 Simtec Electronics 
+[    0.101171] EXYNOS: Initializing architecture 
+[    0.102437] exynos-sysmmu 11e20000.sysmmu: --> 11c00000.fimd_fb 
+[    0.102454] exynos-sysmmu 11e20000.sysmmu: [OK] 
+[    0.102588] exynos-sysmmu 13620000.sysmmu: --> 13400000.mfc 
+[    0.102603] exynos-sysmmu 13620000.sysmmu: [OK] 
+[    0.102732] exynos-sysmmu 11a20000.sysmmu: --> 11850000.gsc 
+[    0.102747] exynos-sysmmu 11a20000.sysmmu: [OK] 
+[    0.102876] exynos-sysmmu 11a30000.sysmmu: --> 11860000.gsc 
+[    0.102891] exynos-sysmmu 11a30000.sysmmu: [OK] 
+[    0.103036] exynos-sysmmu 11a60000.sysmmu: --> 11830000.jpeg 
+[    0.103051] exynos-sysmmu 11a60000.sysmmu: [OK] 
+[    0.103181] exynos-sysmmu 12260000.sysmmu: --> 12180000.fimc_is 
+[    0.103196] exynos-sysmmu 12260000.sysmmu: [OK] 
+[    0.103322] exynos-sysmmu 12270000.sysmmu: --> 12180000.fimc_is 
+[    0.103337] exynos-sysmmu 12270000.sysmmu: [OK] 
+[    0.103462] exynos-sysmmu 12280000.sysmmu: --> 12180000.fimc_is 
+[    0.103477] exynos-sysmmu 12280000.sysmmu: [OK] 
+[    0.103603] exynos-sysmmu 122a0000.sysmmu: --> 12180000.fimc_is 
+[    0.103617] exynos-sysmmu 122a0000.sysmmu: [OK] 
+[    0.103752] exynos-sysmmu 122b0000.sysmmu: --> 12180000.fimc_is 
+[    0.103767] exynos-sysmmu 122b0000.sysmmu: [OK] 
+[    0.103894] exynos-sysmmu 122c0000.sysmmu: --> 120a0000.fimc_is_sensor 
+[    0.103909] exynos-sysmmu 122c0000.sysmmu: [OK] 
+[    0.104067] exynos-sysmmu 122d0000.sysmmu: --> 120a0000.fimc_is_sensor 
+[    0.104082] exynos-sysmmu 122d0000.sysmmu: [OK] 
+[    0.104339] Exynos3250 ASV : Use Fusing Speed Group 3 
+[    0.104353] EXYNOS3250 ASV INFO 
+[    0.104353] LOT ID : N7ABN 
+[    0.104353] IDS : 0 
+[    0.104353] HPM : 0 
+[    0.104375] VDD_ARM ASV group is 2 
+[    0.104391] VDD_ARM LV0 freq : 1000000 volt : 1125000 abb : 8 
+[    0.104403] VDD_ARM LV1 freq : 900000 volt : 1087500 abb : 8 
+[    0.104414] VDD_ARM LV2 freq : 800000 volt : 1050000 abb : 8 
+[    0.104425] VDD_ARM LV3 freq : 700000 volt : 1012500 abb : 8 
+[    0.104436] VDD_ARM LV4 freq : 600000 volt : 975000 abb : 8 
+[    0.104447] VDD_ARM LV5 freq : 500000 volt : 937500 abb : 8 
+[    0.104458] VDD_ARM LV6 freq : 400000 volt : 900000 abb : 8 
+[    0.104469] VDD_ARM LV7 freq : 300000 volt : 862500 abb : 8 
+[    0.104480] VDD_ARM LV8 freq : 200000 volt : 850000 abb : 14 
+[    0.104491] VDD_ARM LV9 freq : 100000 volt : 850000 abb : 14 
+[    0.104500] VDD_MIF ASV group is 2 
+[    0.104512] VDD_MIF LV0 freq : 400000 volt : 850000 
+[    0.104523] VDD_MIF LV1 freq : 200000 volt : 800000 
+[    0.104533] VDD_MIF LV2 freq : 133000 volt : 800000 
+[    0.104544] VDD_MIF LV3 freq : 100000 volt : 800000 
+[    0.104554] VDD_MIF LV4 freq : 50000 volt : 800000 
+[    0.104563] VDD_INT ASV group is 2 
+[    0.104575] VDD_INT LV0 freq : 135000 volt : 925000 
+[    0.104586] VDD_INT LV1 freq : 134000 volt : 925000 
+[    0.104596] VDD_INT LV2 freq : 133000 volt : 900000 
+[    0.104606] VDD_INT LV3 freq : 100000 volt : 850000 
+[    0.104617] VDD_INT LV4 freq : 80000 volt : 850000 
+[    0.104627] VDD_INT LV5 freq : 50000 volt : 850000 
+[    0.130020] bio: create slab <bio-0> at 0 
+[    0.131764] dcvdd-supply: 1200 mV 
+[    0.133987] SCSI subsystem initialized 
+[    0.134373] s3c64xx-spi 13930000.spi: spi bus clock parent not specified, using clock at index 0 as parent 
+[    0.134390] s3c64xx-spi 13930000.spi: number of chip select lines not specified, assuming 1 chip select line 
+[    0.141096] vdd_mif: 600 <--> 1600 mV at 1000 mV 
+[    0.142551] vdd_arm: 600 <--> 1600 mV at 1075 mV 
+[    0.143768] vdd_int: 600 <--> 1600 mV at 1000 mV 
+[    0.145020] vt_cam_sensor_a2v8: 2800 mV 
+[    0.145946] vdd_tsp_3.3: 1800 <--> 3375 mV at 3300 mV 
+[    0.146841] vdd_lcd_3.3: 1800 <--> 3375 mV at 3300 mV 
+[    0.147890] vcc_peri_3.3: 3300 mV 
+[    0.148952] vdd_tsp_1.8: 800 <--> 2375 mV at 1800 mV 
+[    0.150021] vcc_aud_1.8: 800 <--> 2375 mV at 1800 mV 
+[    0.151236] vt_cam_core_1v8: 1800 mV 
+[    0.152628] VDD_USB_AP_1.0V: 1000 mV 
+[    0.153833] LDO8: ramp_delay not set 
+[    0.153850] VDD_UOTG_AP_3.3V: 3300 mV 
+[    0.155123] vcc_peri_1.8: 1800 mV 
+[    0.156176] LDO2: at 1200 mV 
+[    0.157222] LDO4: at 1800 mV 
+[    0.158270] LDO5: at 1000 mV 
+[    0.159358] LDO7: at 1800 mV 
+[    0.160074] s3c-i2c 13860000.i2c: i2c-0: S3C I2C adapter 
+[    0.160990] s3c-i2c 13870000.i2c: i2c-1: S3C I2C adapter 
+[    0.161810] s3c-i2c 138b0000.i2c: i2c-5: S3C I2C adapter 
+[    0.162634] s3c-i2c 138d0000.i2c: i2c-7: S3C I2C adapter 
+[    0.163025] media: Linux media interface: v0.10 
+[    0.163198] Linux video capture interface: v2.00 
+[    0.165382] bq24296_battery_probe ok 
+[    0.165561] i2c-core: driver [bq2429x_charger] using legacy suspend method 
+[    0.165573] i2c-core: driver [bq2429x_charger] using legacy resume method 
+[    0.166579] IOVMM: Created debugfs entry at debugfs/iovmm 
+[    0.166598] IOMMU: Created debugfs entry at debugfs/iommu 
+[    0.166997] Advanced Linux Sound Architecture Driver Initialized. 
+[    0.168068] Bluetooth: Core ver 2.16 
+[    0.168231] NET: Registered protocol family 31 
+[    0.168243] Bluetooth: HCI device and connection manager initialized 
+[    0.168263] Bluetooth: HCI socket layer initialized 
+[    0.168280] Bluetooth: L2CAP socket layer initialized 
+[    0.168337] Bluetooth: SCO socket layer initialized 
+[    0.168900] cfg80211: Calling CRDA to update world regulatory domain 
+[    0.171380] Switching to clocksource mct-frc 
+[    0.174649] cw2015_parse_dt:hardware unsupport dc charge 
+[    0.174658] cw2015_parse_dt:hardware unsupport usb charge 
+[    0.174666] cw201x:support   charger 
+[    0.175243] cw201x 7-0062: the new ATHD have not set 
+[    0.175604] cw201x 7-0062: update flag for new battery info have not set 
+[    0.175815] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[0] = 0x17 
+[    0.175986] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[1] = 0x67 
+[    0.176157] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[2] = 0x6c 
+[    0.176329] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[3] = 0x70 
+[    0.176571] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[4] = 0x70 
+[    0.176746] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[5] = 0x6f 
+[    0.176917] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[6] = 0x6a 
+[    0.177088] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[7] = 0x65 
+[    0.177260] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[8] = 0x62 
+[    0.177431] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[9] = 0x5b 
+[    0.177602] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[10] = 0x55 
+[    0.177774] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[11] = 0x4f 
+[    0.177945] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[12] = 0x4a 
+[    0.178116] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[13] = 0x46 
+[    0.178287] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[14] = 0x43 
+[    0.178458] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[15] = 0x3d 
+[    0.178630] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[16] = 0x35 
+[    0.178802] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[17] = 0x2b 
+[    0.178973] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[18] = 0x26 
+[    0.179144] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[19] = 0x22 
+[    0.179316] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[20] = 0x21 
+[    0.179488] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[21] = 0x2b 
+[    0.179660] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[22] = 0x42 
+[    0.179832] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[23] = 0x4d 
+[    0.180003] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[24] = 0x49 
+[    0.180174] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[25] = 0x49 
+[    0.180345] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[26] = 0xb 
+[    0.180517] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[27] = 0x85 
+[    0.180688] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[28] = 0x9 
+[    0.180860] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[29] = 0x12 
+[    0.181032] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[30] = 0x1d 
+[    0.181202] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[31] = 0x3a 
+[    0.181374] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[32] = 0x47 
+[    0.181576] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[33] = 0x44 
+[    0.181748] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[34] = 0x43 
+[    0.181920] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[35] = 0x4b 
+[    0.182091] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[36] = 0x39 
+[    0.182262] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[37] = 0x17 
+[    0.182433] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[38] = 0x37 
+[    0.182605] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[39] = 0x48 
+[    0.182776] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[40] = 0x4 
+[    0.182948] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[41] = 0x16 
+[    0.183119] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[42] = 0x52 
+[    0.183291] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[43] = 0x87 
+[    0.183461] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[44] = 0x8f 
+[    0.183633] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[45] = 0x91 
+[    0.183805] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[46] = 0x94 
+[    0.183976] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[47] = 0x52 
+[    0.184148] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[48] = 0x82 
+[    0.184319] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[49] = 0x8c 
+[    0.184490] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[50] = 0x92 
+[    0.184662] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[51] = 0x96 
+[    0.184834] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[52] = 0x81 
+[    0.185005] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[53] = 0x6b 
+[    0.185176] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[54] = 0xc0 
+[    0.185348] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[55] = 0xcb 
+[    0.185518] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[56] = 0x2f 
+[    0.185690] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[57] = 0x7d 
+[    0.185862] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[58] = 0x72 
+[    0.186033] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[59] = 0xa5 
+[    0.186206] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[60] = 0xb5 
+[    0.186378] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[61] = 0xc1 
+[    0.186562] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[62] = 0x6a 
+[    0.186736] cw201x 7-0062: cw_bat->plat_data.cw_bat_config_info[63] = 0x9 
+[    0.212865] cw201x 7-0062: cw2015/cw2013 driver v1.2 probe sucess 
+[    0.213351] NET: Registered protocol family 2 
+[    0.213975] TCP established hash table entries: 4096 (order: 3, 32768 bytes) 
+[    0.214072] TCP bind hash table entries: 4096 (order: 3, 32768 bytes) 
+[    0.214162] TCP: Hash tables configured (established 4096 bind 4096) 
+[    0.214212] TCP: reno registered 
+[    0.214229] UDP hash table entries: 256 (order: 1, 8192 bytes) 
+[    0.214265] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes) 
+[    0.214533] NET: Registered protocol family 1 
+[    0.214878] dhd_wlan_init: start 
+[    0.221726] cw201x 7-0062: get cw_capacity error; cw_capacity = 255 
+[    0.234560] ROMFS MTD (C) 2007 Red Hat, Inc. 
+[    0.234860] fuse init (API version 7.22) 
+[    0.235795] msgmni has been set to 873 
+[    0.238412] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251) 
+[    0.238428] io scheduler noop registered 
+[    0.238439] io scheduler deadline registered 
+[    0.238474] io scheduler cfq registered (default) 
+[    0.238734] Samsung MIE driver 
+[    0.239492] s5p-smies 11c90000.smies: SMIES enabled 
+[    0.239505] s5p-smies 11c90000.smies: probe succeeded 
+[    0.247304] dma-pl330 12680000.pdma: Loaded driver for PL330 DMAC-1315632 
+[    0.247325] dma-pl330 12680000.pdma: [8CDBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32 
+[    0.254712] dma-pl330 12690000.pdma: Loaded driver for PL330 DMAC-1315632 
+[    0.254732] dma-pl330 12690000.pdma: [8CDBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32 
+[    0.255446] 13800000.serial: ttySAC0 at MMIO 0x13800000 (irq = 141) is a S3C6400/10 
+[    0.255987] 13810000.serial: ttySAC1 at MMIO 0x13810000 (irq = 142) is a S3C6400/10 
+[    0.256583] 13820000.serial: ttySAC2 at MMIO 0x13820000 (irq = 143) is a S3C6400/10 
+[    1.713431] console [ttySAC2] enabled 
+[    1.717671] 13830000.serial: ttySAC3 at MMIO 0x13830000 (irq = 144) is a S3C6400/10 
+[    1.725981] PM DOMAIN: pd-g3d, Device : 13000000.mali Registered 
+[    1.733283] Mali: Mali device driver loaded 
+[    1.747069] brd: module loaded 
+[    1.753620] loop: module loaded 
+[    1.753717] vibrator_init: vibrator 
+[    1.754095] vibrator_probe: vibrator.2 registering 
+[    1.754236] vibrator_parse_dt pwm-ch:1 max-timeout:100000 
+[    1.755280] vibrator regulator turn on 
+[    1.770248] u502_init_xr20m1172_gpio ---------- xuart_rst 
+[    1.771210] lcr0====255 
+[    1.771604] lcr0====255 
+[    1.773255] lcr0====255 
+[    1.773613] lcr0====255 
+[    1.773867] tun: Universal TUN/TAP device driver, 1.6 
+[    1.778710] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com> 
+[    1.785164] PPP generic driver version 2.4.2 
+[    1.789548] PPP BSD Compression module registered 
+[    1.793810] PPP Deflate Compression module registered 
+[    1.798849] PPP MPPE Compression module registered 
+[    1.803616] NET: Registered protocol family 24 
+[    1.809214] s3c-hsotg 12480000.usb: regs e00a0000, irq 173 
+[    1.814493] s3c-hsotg 12480000.usb: EPs:15 
+[    1.817594] s3c-hsotg 12480000.usb: dedicated fifos 
+[    1.828653] s2m-rtc s2m-rtc: s2m_rtc_init_reg: initialize RTC time 
+[    1.828837] s2m-rtc s2m-rtc: s2m_rtc_set_time: 2014-01-01 12:00:00(0x08)PM 
+[    1.837143] s2m-rtc s2m-rtc: s2m_rtc_enable_wtsr_smpl: WTSR: enable, SMPL: enable 
+[    1.847394] s2m-rtc s2m-rtc: s2m_rtc_read_time: 2014-01-01 12:00:00(0x08)PM 
+[    1.851552] s2m-rtc s2m-rtc: s2m_rtc_read_alarm: 2000-01-01 12:00:00(0) 
+[    1.858406] s2m-rtc s2m-rtc: s2m_rtc_read_time: 2014-01-01 12:00:00(0x08)PM 
+[    1.863779] s2m-rtc s2m-rtc: rtc core: registered s2m-rtc as rtc0 
+[    1.870345] i2c /dev entries driver 
+[    1.874706] mdev_output.5: Media0[0xdbf9e400] was registered successfully 
+[    1.880100] PM DOMAIN: spd_gsc0, Device : 11850000.gsc Registered 
+[    1.885827] exynos-gsc 11850000.gsc: exynos-iommu gpd_dev_ops inserted! 
+[    1.892863] [INFO]gsc_probe:1734: mdev->mdev[0] = 0xdbf9e400, mdev->mdev[1] = 0x00000000 
+[    1.901175] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x40000000 B, IOVMM from 0x10000000. 
+[    1.908937] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x20000000 B, IOVMM from 0x50000000. 
+[    1.917339] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0x70000000. 
+[    1.925768] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x30000000 B, IOVMM from 0x80000000. 
+[    1.934184] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x20000000 B, IOVMM from 0xb0000000. 
+[    1.942600] exynos-gsc 11850000.gsc: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0xd0000000. 
+[    1.951078] [INFO]gsc_probe:1763: gsc-0 registered successfully 
+[    1.957012] PM DOMAIN: spd_gsc1, Device : 11860000.gsc Registered 
+[    1.962989] exynos-gsc 11860000.gsc: exynos-iommu gpd_dev_ops inserted! 
+[    1.970029] [INFO]gsc_probe:1734: mdev->mdev[0] = 0xdbf9e400, mdev->mdev[1] = 0x00000000 
+[    1.978315] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x40000000 B, IOVMM from 0x10000000. 
+[    1.986100] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x20000000 B, IOVMM from 0x50000000. 
+[    1.994503] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0x70000000. 
+[    2.002934] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x30000000 B, IOVMM from 0x80000000. 
+[    2.011350] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x20000000 B, IOVMM from 0xb0000000. 
+[    2.019764] exynos-gsc 11860000.gsc: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0xd0000000. 
+[    2.028238] [INFO]gsc_probe:1763: gsc-1 registered successfully 
+[    2.034521] PM DOMAIN: spd_jpeg, Device : 11830000.jpeg Registered 
+[    2.040242] jpeg-hx2 11830000.jpeg: exynos-iommu gpd_dev_ops inserted! 
+[    2.046818] jpeg-hx2 11830000.jpeg: failed to get child1 clk 
+[    2.058840] TRIMINFO[0] = 0x1 
+[    2.058928] TMU_CONTROL[0] = 0x1 
+[    2.059021] CURRENT_TEMP[0] = 0x1 
+[    2.061842] THRESHOLD_TEMP_RISE[0] = 0x1 
+[    2.065727] THRESHOLD_TEMP_FALL[0] = 0x1 
+[    2.069657] INTEN[0] = 0x1 
+[    2.072343] INTCLEAR[0] = 0x1 
+[    2.076294] s3c2410-wdt 10060000.watchdog: watchdog inactive, reset disabled, irq disabled 
+[    2.084402] device-mapper: uevent: version 1.0.3 
+[    2.088818] device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-devel@redhat.com 
+[    2.096894] Bluetooth: Virtual HCI driver ver 1.3 
+[    2.101534] Bluetooth: HCI UART driver ver 2.2 
+[    2.105658] Bluetooth: HCI H4 protocol initialized 
+[    2.110451] Bluetooth: HCI BCSP protocol initialized 
+[    2.115400] Bluetooth: HCILL protocol initialized 
+[    2.120083] Bluetooth: HCIATH3K protocol initialized 
+[    2.125035] Bluetooth: HCI Three-wire UART (H5) protocol initialized 
+[    2.131367] Bluetooth: Generic Bluetooth SDIO driver ver 0.1 
+[    2.137553] [BT] bcm4354_bluetooth_probe. 
+[    2.141326] ============================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 0 
+[    2.149079] [BT] Bluetooth Power On. 
+[    2.256511] ============================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> on 
+[    2.256838] [BT] bcm4354_bluetooth_probe End 
+[    2.257368] cpuidle: using governor ladder 
+[    2.257708] cpuidle: using governor menu 
+[    2.258156] Synopsys Designware Multimedia Card Interface Driver 
+[    2.261573] dwmmc_exynos 12510000.dwmmc0: Clock pin control Pin:(null) Addr:(null) Val:0 Num:0 
+[    2.269460] dwmmc_exynos 12510000.dwmmc0: Using internal DMA controller. 
+[    2.276016] dwmmc_exynos 12510000.dwmmc0: FIFOTH: 0x 300f0070 
+[    2.281732] dwmmc_exynos 12510000.dwmmc0: Version ID is 260a 
+[    2.287549] dwmmc_exynos 12510000.dwmmc0: DW MMC controller at irq 174, 64 bit host data width, 128 deep fifo 
+[    2.311521] mmc_host mmc0: Bus speed (slot 0) = 25000000Hz (slot req 400000Hz, actual 390625HZ div = 32) 
+[    2.326620] ----> linuxpark : dw_mci_init_slot/3504: external X 
+[    2.326799] dwmmc_exynos 12510000.dwmmc0: 1 slots initialized 
+[    2.327328] dwmmc_exynos 12520000.dwmmc1: Clock pin control Pin:(null) Addr:(null) Val:0 Num:4 
+[    2.327687] dwmmc_exynos 12520000.dwmmc1: Using internal DMA controller. 
+[    2.334719] dwmmc_exynos 12520000.dwmmc1: FIFOTH: 0x 20070038 
+[    2.341447] dwmmc_exynos 12520000.dwmmc1: Version ID is 260a 
+[    2.345210] dwmmc_exynos 12520000.dwmmc1: DW MMC controller at irq 175, 32 bit host data width, 64 deep fifo 
+[    2.366513] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 400000Hz, actual 390625HZ div = 32) 
+[    2.381551] ----> linuxpark : dw_mci_init_slot/3502: external O 
+[    2.381728] dwmmc_exynos 12520000.dwmmc1: 1 slots initialized 
+[    2.382249] dwmmc_exynos 12530000.dwmmc2: Clock pin control Pin:(null) Addr:(null) Val:0 Num:0 
+[    2.384582] dwmmc_exynos 12530000.dwmmc2: Using internal DMA controller. 
+[    2.391224] mmc0: BKOPS_EN bit is not set 
+[    2.395265] dwmmc_exynos 12530000.dwmmc2: FIFOTH: 0x 20070078 
+[    2.400964] dwmmc_exynos 12530000.dwmmc2: Version ID is 260a 
+[    2.406658] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 400000Hz, actual 396825HZ div = 63) 
+[    2.416057] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 50000000Hz, actual 50000000HZ div = 0) 
+[    2.425831] dwmmc_exynos 12530000.dwmmc2: DW MMC controller at irq 176, 32 bit host data width, 128 deep fifo 
+[    2.426253] mmc_host mmc0: Bus speed (slot 0) = 100000000Hz (slot req 50000000Hz, actual 50000000HZ div = 1) 
+[    2.426486] mmc0: new high speed DDR MMC card at address 0001 
+[    2.436566] mmcblk0: mmc0:0001 F5X5MA 3.64 GiB 
+[    2.436841] mmcblk0boot0: mmc0:0001 F5X5MA partition 1 4.00 MiB 
+[    2.437113] mmcblk0boot1: mmc0:0001 F5X5MA partition 2 4.00 MiB 
+[    2.437354] mmcblk0rpmb: mmc0:0001 F5X5MA partition 3 512 KiB 
+[    2.474419]  mmcblk0: p1 
+[    2.478549]  mmcblk0boot1: unknown partition table 
+[    2.482094]  mmcblk0boot0: unknown partition table 
+[    2.486519] mmc_host mmc2: Bus speed (slot 0) = 25000000Hz (slot req 400000Hz, actual 390625HZ div = 32) 
+[    2.506550] ----> linuxpark : dw_mci_init_slot/3504: external X 
+[    2.506730] dwmmc_exynos 12530000.dwmmc2: 1 slots initialized 
+[    2.509295] GACT probability NOT on 
+[    2.509819] Mirror/redirect action on 
+[    2.511512] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 300000Hz, actual 297619HZ div = 42) 
+[    2.523008] u32 classifier 
+[    2.525609]     Actions configured 
+[    2.529047] Netfilter messages via NETLINK v0.30. 
+[    2.533787] nf_conntrack version 0.5.0 (6989 buckets, 27956 max) 
+[    2.540662] ctnetlink v0.93: registering with nfnetlink. 
+[    2.545076] NF_TPROXY: Transparent proxy support initialized, version 4.1.0 
+[    2.551934] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd. 
+[    2.556479] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 200000Hz, actual 198412HZ div = 63) 
+[    2.567642] xt_time: kernel timezone is -0000 
+[    2.571923] ip_tables: (C) 2000-2006 Netfilter Core Team 
+[    2.577107] arp_tables: (C) 2002 David S. Miller 
+[    2.581512] TCP: cubic registered 
+[    2.584720] Initializing XFRM netlink socket 
+[    2.590253] NET: Registered protocol family 10 
+[    2.594332] mip6: Mobile IPv6 
+[    2.596388] ip6_tables: (C) 2000-2006 Netfilter Core Team 
+[    2.601987] sit: IPv6 over IPv4 tunneling driver 
+[    2.606493] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 100000Hz, actual 100000HZ div = 125) 
+[    2.617701] NET: Registered protocol family 17 
+[    2.620342] NET: Registered protocol family 15 
+[    2.624924] Bluetooth: RFCOMM TTY layer initialized 
+[    2.629650] Bluetooth: RFCOMM socket layer initialized 
+[    2.634755] Bluetooth: RFCOMM ver 1.11 
+[    2.638478] Bluetooth: BNEP (Ethernet Emulation) ver 1.3 
+[    2.643770] Bluetooth: BNEP filters: protocol multicast 
+[    2.648988] Bluetooth: BNEP socket layer initialized 
+[    2.653955] Bluetooth: HIDP (Human Interface Emulation) ver 1.2 
+[    2.659840] Bluetooth: HIDP socket layer initialized 
+[    2.664812] NET: Registered protocol family 35 
+[    2.669261] lib80211: common routines for IEEE802.11 drivers 
+[    2.675310] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 3 
+[    2.682510] Registering SWP/SWPB emulation handler 
+[    2.690856] PM DOMAIN: pd-lcd0, Device : 11c00000.fimd_fb Registered 
+[    2.693624] s5p-decon-display 11c00000.fimd_fb: exynos-iommu gpd_dev_ops inserted! 
+[    2.701341] parse_display_driver_dt: decon_driver.regs 11c00000 dsi_driver.regs 11c80000 
+[    2.731267] s5p-decon-display 11c00000.fimd_fb: mipi-dsi driver(CPU mode) has been probed. 
+[    2.731530] s5p-decon-display 11c00000.fimd_fb: PSR mode is 2(0: VIDEO, 1: DP, 2: MIPI) 
+[    2.732936] s5p-decon-display 11c00000.fimd_fb: IOVMM: IOVM SIZE = 0x40000000 B, IOVMM from 0x10000000. 
+[    2.734840] s5p-decon-display 11c00000.fimd_fb: IOVMM: IOVM SIZE = 0x40000000 B, IOVMM from 0x50000000. 
+[    2.744229] s5p-decon-display 11c00000.fimd_fb: IOVMM: IOVM SIZE = 0x30000000 B, IOVMM from 0x90000000. 
+[    2.753591] s5p-decon-display 11c00000.fimd_fb: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0xc0000000. 
+[    2.762965] s5p-decon-display 11c00000.fimd_fb: IOVMM: IOVM SIZE = 0x10000000 B, IOVMM from 0xd0000000. 
+[    5.771557] s5p-decon-display 11c00000.fimd_fb: wait for vsync timeout 
+[    5.772311] s5p-decon-display 11c00000.fimd_fb: window 0: fb 
+[    5.772475] s5p-decon-display 11c00000.fimd_fb: create_decon_display_controller: End 
+[    5.773428] vt_cam_core_1v8: disabling 
+[    5.774191] vdd_tsp_3.3: disabling 
+[    5.777110] vt_cam_sensor_a2v8: disabling 
+[    5.781787] file system registered 
+[    5.787027] android_usb gadget: Mass Storage Function, version: 2009/09/11 
+[    5.790672] android_usb gadget: Number of LUNs=1 
+[    5.795311]  lun0: LUN: removable file: (no medium) 
+[    5.800893] android_usb gadget: android_usb ready 
+[    5.805544] s3c-hsotg 12480000.usb: bound driver android_usb 
+[    5.811865] input: gpio_keys.1 as /devices/gpio_keys.1/input/input0 
+[    5.819087] s2m-rtc s2m-rtc: s2m_rtc_read_time: 2014-01-01 12:00:03(0x08)PM 
+[    5.823718] s2m-rtc s2m-rtc: setting system clock to 2014-01-01 12:00:03 UTC (1388577603) 
+[    5.831872] CPUFREQ L0 : 1125000 uV ABB : 8 
+[    5.835981] CPUFREQ L1 : 1087500 uV ABB : 8 
+[    5.840168] CPUFREQ L2 : 1050000 uV ABB : 8 
+[    5.844337] CPUFREQ L3 : 1012500 uV ABB : 8 
+[    5.848501] CPUFREQ L4 : 975000 uV ABB : 8 
+[    5.852582] CPUFREQ L5 : 937500 uV ABB : 8 
+[    5.856658] CPUFREQ L6 : 900000 uV ABB : 8 
+[    5.860719] CPUFREQ L7 : 862500 uV ABB : 8 
+[    5.864822] CPUFREQ L8 : 850000 uV ABB : 14 
+[    5.868985] CPUFREQ L9 : 850000 uV ABB : 14 
+[    5.874069] Exynos: Kernel Thermal management registered 
+[    5.890150] MIF 400000Khz ASV is 850000uV 
+[    5.890307] MIF 200000Khz ASV is 800000uV 
+[    5.890422] MIF 133000Khz ASV is 800000uV 
+[    5.890535] MIF 100000Khz ASV is 800000uV 
+[    5.894437] MIF 50000Khz ASV is 800000uV 
+[    5.901555] INT 135000Khz ASV is 925000uV 
+[    5.902313] INT 134000Khz ASV is 925000uV 
+[    5.906288] INT 133000Khz ASV is 900000uV 
+[    5.910303] INT 100000Khz ASV is 850000uV 
+[    5.914289] INT 80000Khz ASV is 850000uV 
+[    5.918204] INT 50000Khz ASV is 850000uV 
+[    5.925002] PM DOMAIN: Power off unused power domains. 
+[    5.927246] ALSA device list: 
+[    5.930157]   No soundcards found. 
+[    5.934138] Waiting 2sec before mounting root device... 
+[    5.938790] pd-cam: Power-off latency exceeded, new value 4829375 ns 
+[    7.947653] EXT3-fs (mmcblk0p1): error: couldn't mount because of unsupported optional features (240) 
+[    7.950920] EXT2-fs (mmcblk0p1): error: couldn't mount because of unsupported optional features (244) 
+[    8.466741] EXT4-fs (mmcblk0p1): recovery complete 
+[    8.467615] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null) 
+[    8.467938] VFS: Mounted root (ext4 filesystem) on device 179:1. 
+[    8.468804] devtmpfs: mounted 
+[    8.469333] Freeing unused kernel memory: 216K (c07be000 - c07f4000) 
+[    8.577388] systemd[1]: RTC configured in localtime, applying delta of 0 minutes to system time. 
+[    8.596897] systemd[1]: systemd 208 running in system mode. (+PAM +LIBWRAP +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ) 
+
+Welcome to [34mFedora 20 (Heisenbug)[39m! 
+
+[    8.626391] systemd[1]: Failed to insert module 'autofs4' 
+[    8.628185] systemd[1]: Set hostname to <localhost.localdomain>. 
+[    8.835660] systemd[1]: Expecting device dev-ttySAC2.device... 
+         Expecting device dev-ttySAC2.device... 
+[    8.846677] systemd[1]: Starting Forward Password Requests to Wall Directory Watch. 
+[    8.847233] systemd[1]: Started Forward Password Requests to Wall Directory Watch. 
+[    8.847539] systemd[1]: Starting Remote File Systems. 
+[[32m  OK  [39m] Reached target Remote File Systems. 
+[    8.881617] systemd[1]: Reached target Remote File Systems. 
+[    8.881896] systemd[1]: Starting Collect Read-Ahead Data... 
+         Starting Collect Read-Ahead Data... 
+[    8.908502] systemd[1]: Started Replay Read-Ahead Data. 
+[    8.908787] systemd[1]: Starting /dev/initctl Compatibility Named Pipe. 
+[    8.917419] systemd-readahead[791]: Failed to create fanotify object: Function not implemented 
+[[32m  OK  [39m] Listening on /dev/initctl Compatibility Named Pipe. 
+[    8.941718] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe. 
+[    8.942025] systemd[1]: Starting Delayed Shutdown Socket. 
+[[32m  OK  [39m] Listening on Delayed Shutdown Socket. 
+[    8.966616] systemd[1]: Listening on Delayed Shutdown Socket. 
+[    8.966859] systemd[1]: Starting Device-mapper event daemon FIFOs. 
+[[32m  OK  [39m] Listening on Device-mapper event daemon FIFOs. 
+[    8.991610] systemd[1]: Listening on Device-mapper event daemon FIFOs. 
+[    8.991863] systemd[1]: Starting LVM2 metadata daemon socket. 
+[[32m  OK  [39m] Listening on LVM2 metadata daemon socket. 
+[    9.017757] systemd[1]: Listening on LVM2 metadata daemon socket. 
+[    9.018725] systemd[1]: Starting Dispatch Password Requests to Console Directory Watch. 
+[    9.020872] systemd[1]: Started Dispatch Password Requests to Console Directory Watch. 
+[    9.023064] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point. 
+[    9.027564] systemd[1]: Starting Journal Socket. 
+[[32m  OK  [39m] Listening on Journal Socket. 
+[    9.067048] systemd[1]: Listening on Journal Socket. 
+[    9.068626] systemd[1]: Starting Create list of required static device nodes for the current kernel... 
+         Starting Create list of required static device nodes...rrent kernel... 
+[    9.102564] systemd[1]: Starting Journal Service... 
+         Starting Journal Service... 
+[[32m  OK  [39m] Started Journal Service. 
+[    9.126773] systemd[1]: Started Journal Service. 
+         Mounting Debug File System... 
+[[32m  OK  [39m] Listening on udev Kernel Socket. 
+[[32m  OK  [39m] Listening on udev Control Socket. 
+         Starting udev Coldplug all Devices... 
+[[32m  OK  [39m] Reached target Swap. 
+[[32m  OK  [39m] Created slice Root Slice. 
+[[32m  OK  [39m] Created slice User and Session Slice. 
+[[32m  OK  [39m] Created slice System Slice. 
+[[32m  OK  [39m] Reached target Slices. 
+[[32m  OK  [39m] Created slice system-getty.slice. 
+[[32m  OK  [39m] Created slice system-serial\x2dgetty.slice. 
+[[32m  OK  [39m] Started Collect Read-Ahead Data. 
+[[32m  OK  [39m] Started Create list of required static device nodes ...current kernel. 
+[[32m  OK  [39m] Mounted Debug File System. 
+         Starting Create static device nodes in /dev... 
+         Mounting Configuration File System... 
+         Mounting FUSE Control File System... 
+         Starting Apply Kernel Variables... 
+         Starting Remount Root and Kernel File Systems... 
+[[32m  OK  [39m] Mounted FUSE Control File System. 
+[[32m  OK  [39m] Mounted Configuration File System. 
+[[32m  OK  [39m] Started Create static device nodes in /dev. 
+[[1m[31mFAILED[0m] Failed to start Apply Kernel Variables. 
+See 'systemctl status systemd-sysctl.service' for details. 
+         Starting udev Kernel Device Manager... 
+[    9.454794] EXT4-fs (mmcblk0p1): re-mounted. Opts: (null) 
+[[32m  OK  [39m] Started udev Coldplug all Devices. 
+[[32m  OK  [39m] Started Remount Root and Kernel File Systems. 
+[    9.471769] systemd-udevd[1305]: starting version 208 
+         Starting Load/Save Random Seed... 
+[[32m  OK  [39m] Reached target Local File Systems (Pre). 
+         Starting Configure read-only root support... 
+         Starting udev Wait for Complete Device Initialization... 
+[[32m  OK  [39m] Started Load/Save Random Seed. 
+[[32m  OK  [39m] Started udev Kernel Device Manager. 
+[[32m  OK  [39m] Started udev Wait for Complete Device Initialization. 
+         Starting Activation of DM RAID sets... 
+[[32m  OK  [39m] Started Configure read-only root support. 
+[[32m  OK  [39m] Found device /dev/ttySAC2. 
+[[32m  OK  [39m] Started Activation of DM RAID sets. 
+[[32m  OK  [39m] Reached target Local File Systems. 
+         Starting Trigger Flushing of Journal to Persistent Storage... 
+         Starting Create Volatile Files and Directories... 
+[[32m  OK  [39m] Reached target Encrypted Volumes. 
+[    9.840674] pd-cam: Power-on latency exceeded, new value 1639375 ns 
+[    9.857615] systemd-journald[801]: Received request to flush runtime journal from PID 1 
+[[32m  OK  [39m] Started Trigger Flushing of Journal to Persistent Storage. 
+[[32m  OK  [39m] Started Create Volatile Files and Directories. 
+         Starting Update UTMP about System Reboot/Shutdown... 
+[[32m  OK  [39m] Started Update UTMP about System Reboot/Shutdown. 
+[[32m  OK  [39m] Reached target System Initialization. 
+[[32m  OK  [39m] Listening on CUPS Printing Service Sockets. 
+[[32m  OK  [39m] Reached target Timers. 
+         Starting Manage Sound Card State (restore and store)... 
+[[32m  OK  [39m] Started Manage Sound Card State (restore and store). 
+[[32m  OK  [39m] Reached target Paths. 
+[[32m  OK  [39m] Listening on D-Bus System Message Bus Socket. 
+[[32m  OK  [39m] Reached target Sockets. 
+[[32m  OK  [39m] Reached target Basic System. 
+         Starting IPv4 firewall with iptables... 
+         Starting System Logging Service... 
+         Starting Network Manager... 
+         Starting Self Monitoring and Reporting Technology (SMART) Daemon... 
+[[32m  OK  [39m] Started Self Monitoring and Reporting Technology (SMART) Daemon. 
+         Starting Network Time Service... 
+         Starting Resets System Activity Logs... 
+         Starting Root Filesystem Auto-Resizer... 
+         Starting D-Bus System Message Bus... 
+[[32m  OK  [39m] Started D-Bus System Message Bus. 
+         Starting Permit User Sessions... 
+         Starting Login Service... 
+[[32m  OK  [39m] Started System Logging Service. 
+[[32m  OK  [39m] Started Permit User Sessions. 
+[[32m  OK  [39m] Started Root Filesystem Auto-Resizer. 
+         Starting Job spooling tools... 
+[[32m  OK  [39m] Started Job spooling tools. 
+[[32m  OK  [39m] Started Network Time Service. 
+[[1m[31mFAILED[0m] Failed to start Resets System Activity Logs. 
+See 'systemctl status sysstat.service' for details. 
+[[32m  OK  [39m] Started Login Service. 
+[[32m  OK  [39m] Started IPv4 firewall with iptables. 
+         Starting Authorization Manager... 
+[[32m  OK  [39m] Started Authorization Manager. 
+[   10.821569] s2m-rtc s2m-rtc: s2m_rtc_set_time: 2014-01-01 12:00:08(0x08)PM 
+[   10.825121] s2m-rtc s2m-rtc: s2m_rtc_read_time: 2014-01-01 12:00:08(0x08)PM 
+[[32m  OK  [39m] Started Network Manager. 
+[[32m  OK  [39m] Reached target Network. 
+         Starting Xinetd A Powerful Replacement For Inetd... 
+         Starting Sendmail Mail Transport Agent... 
+         Starting Memcached... 
+[[32m  OK  [39m] Started Memcached. 
+         Starting /etc/rc.d/rc.local Compatibility... 
+         Starting Bluetooth service... 
+[[32m  OK  [39m] Started Xinetd A Powerful Replacement For Inetd. 
+[[32m  OK  [39m] Started Bluetooth service. 
+         Starting Hostname Service... 
+[[32m  OK  [39m] Started Hostname Service. 
+[   11.179741] dhd_module_init in 
+[   11.179990] Power-up adapter 'DHD generic adapter' 
+[   11.180672] wifi_platform_set_power = 1 
+[   11.180809] ------------------------------------------------ 
+[   11.180992] ------------------------------------------------ 
+[   11.181183] dhd_wlan_power Enter: power on 
+[[32m  OK  [39m] Started Sendmail Mail Transport Agent. 
+         Starting Sendmail Mail Transport Client... 
+[[32m  OK  [39m] Started Sendmail Mail Transport Client. 
+[   11.386508] wifi_platform_bus_enumerate device present 1 
+[   11.386690] dhd_wlan_set_carddetect: notify_func=c0351bbc, mmc_host_dev=db42c010, val=1 
+[   11.604578] mmc_host mmc1: Bus speed (slot 0) = 25000000Hz (slot req 400000Hz, actual 390625HZ div = 32) 
+[   11.642756] mmc1: queuing unknown CIS tuple 0x80 (2 bytes) 
+[   11.648581] mmc1: queuing unknown CIS tuple 0x80 (7 bytes) 
+[   11.652293] mmc1: queuing unknown CIS tuple 0x80 (3 bytes) 
+[   11.758221] mmc_host mmc1: Bus speed (slot 0) = 200000000Hz (slot req 400000Hz, actual 400000HZ div = 250) 
+[   11.758783] mmc_host mmc1: Bus speed (slot 0) = 200000000Hz (slot req 200000000Hz, actual 200000000HZ div = 0) 
+[   11.760715] dwmmc_exynos 12520000.dwmmc1: data CRC error 
+[   11.761091] mmc_host mmc1: Tuning error: cmd.error:0, data.error:-84 
+[   11.773635] dwmmc_exynos 12520000.dwmmc1: sample_good: 0x fe best_sample: 0x 04 
+[   11.787273] mmc1: queuing unknown CIS tuple 0x91 (3 bytes) 
+[   11.787608] mmc1: new ultra high speed SDR104 SDIO card at address 0001 
+[   11.817039] bcmsdh_sdmmc: bcmsdh_sdmmc_probe Enter 
+[   11.817406] bcmsdh_sdmmc: bcmsdh_sdmmc_probe Enter 
+[   11.817582] bus num (host idx)=1, slot num (rca)=1 
+[   11.817750] found adapter info 'DHD generic adapter' 
+[[32m  OK  [39m] Reached target Bluetooth. 
+[   13.832672] F1 signature OK, socitype:0x1 chip:0x4354 rev:0x1 pkg:0x0 
+[   13.833764] DHD: dongle ram size is set to 786432(orig 786432) at 0x180000 
+[   13.834074] wifi_platform_prealloc: failed to alloc static mem section 7 
+[   13.843658] wl_create_event_handler(): thread:wl_event_handler:5ef started 
+[   13.844082] CFG80211-INFO2) wl_event_handler : tsk Enter, tsk = 0xd63c1440 
+[   13.848104] p2p0: P2P Interface Registered 
+[   13.848476] dhd_attach(): thread:dhd_watchdog_thread:5f4 started 
+[   13.854634] dhd_attach(): thread:dhd_dpc:5f5 started 
+[   13.859441] dhd_attach(): thread:dhd_rxf:5f6 started 
+[   13.864360] dhd_deferred_work_init: work queue initialized 
+[   13.870225] dhdsdio_download_firmware: firmware path=/etc/wifi/fw.bin, nvram path=/etc/wifi/nvram.txt 
+[   13.900368] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.901404] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8947 on p2p0 I/F. Ignoring. 
+[   13.904754] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.909263] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.920780] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.928125] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.941926] CFGP2P-INFO2) wl_cfgp2p_do_ioctl : wl_cfgp2p_do_ioctl: IOCTL req 0x8b01 on p2p0 I/F. Ignoring. 
+[   13.971609] sdioh_request_buffer: [1] doing memory copy buf=da94f000, len=45 
+[   13.973390] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded. 
+[   14.011600] dhd_bus_init: enable 0x06, ready 0x06 (waited 0us) 
+[   14.012134] wake enabled for irq 306 
+[   14.012405] dhdsdio_isr() w/o interrupt configured! 
+[   14.014925] dhd_wl_ioctl: WLC_GET_VAR: cisdump, ret = -23 
+[   14.015199] [WIFI_SEC] dhd_check_module_cid: CIS reading failed, ret=-23 
+[   14.072043] Firmware up: op_mode=0x0005, MAC=f4:34:7b 
+[   14.151846] dhd_wl_ioctl: WLC_SET_VAR: okc_enable, ret = -23 
+[   14.161832] dhd_wl_ioctl: WLC_SET_VAR: ccx_enable, ret = -23 
+[   14.171847] dhd_wl_ioctl: WLC_SET_VAR: lpc, ret = -23 
+[   14.172006] dhd_preinit_ioctls Set lpc failed  -23 
+[   14.172190] dhdcdc_set_ioctl: SET PM to 2 
+[   14.181847] [WIFI_SEC] sec_control_pm: /data/.psm.info open failed, so set PM to 2 
+[   14.221874] [WIFI_SEC] dhd_sel_ant_from_file: File [/data/.ant.info] open error 
+[   14.303187] dhd_wl_ioctl: WLC_SET_VAR: pspretend_threshold, ret = -23 
+[   14.303531] dhd_preinit_ioctls pspretend_threshold for HostAPD failed  -23 
+[   14.443469] Firmware version = wl0: Mar 20 2015 00:11:38 version 7.26.5.18 (r533009) FWID 01-52508b28 
+[   14.444378] [WIFI_SEC] sec_save_wlinfo: .wifiver.info File open failed. 
+[   14.444733] [WIFI_SEC] sec_save_wlinfo: .wifiver.info File open failed. 
+[   14.483240] dhd_wlfc_hostreorder_init(): successful bdcv2 tlv signaling, 64 
+[   14.495939] dhd_wl_ioctl: WLC_GET_VAR: pfnlbest, ret = -23 
+[   14.518498] dhd_wl_ioctl: WLC_SET_VAR: wnm, ret = -23 
+[   14.518775] dhd_interworking_enable: failed to set WNM info, ret=-23 
+[   14.528611] dhd_wl_ioctl: WLC_GET_VAR: cisdump, ret = -23 
+[   14.528949] [WIFI_SEC] dhd_check_module_mac: Check module mac by legacy FW : f4:34:7b 
+[   14.529487] Dongle Host Driver, version 1.141.64.6 (r) 
+[   14.529487] Compiled in drivers/net/wireless/bcmdhd on Jul  8 2015 at 11:40:25 
+[   14.549671] Register interface [wlan0]  MAC: f4:34:7b 
+[   14.549671] 
+[[32m  OK  [39m] Started /etc/rc.d/rc.local Compatibility. 
+         Starting Serial Getty on ttySAC2... 
+[[32m  OK  [39m] Started Serial Getty on ttySAC2. 
+[[32m  OK  [39m] Reached target Login Prompts. 
+[[32m  OK  [39m] Reached target Multi-User System. 
+[   15.333349] CFG80211-TRACE) __wl_cfg80211_scan : START SCAN 
+
+Fedora release 20 (Heisenbug) 
+Kernel 3.10.9artik-5-v1.01 on an armv7l (ttySAC2) 
+
+localhost login: [   17.852051] CFG80211-TRACE) wl_escan_handler : SCAN COMPLETED: scanned AP count=0 
+root 
+Password: 
+Last failed login: Wed Jan  1 12:06:21 UTC 2014 on ttySAC2 
+There were 11 failed login attempts since the last successful login. 
+Last login: Wed Jan  1 12:00:20 on ttySAC2 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
+[root@localhost ~]# 
